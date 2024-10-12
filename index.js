@@ -10,3 +10,11 @@ const messageConfig = {
       "Loki"
   ]
 };
+
+const printCard = function() {
+  console.log(this.frontContent)
+  console.log(this.insideContent)
+  this.signatories.forEach((signatory) => 
+  console.log(`${this.closing[signatory]}, ${signatory}`))
+}
+printCard.apply(messageConfig)
